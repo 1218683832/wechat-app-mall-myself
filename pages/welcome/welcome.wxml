@@ -1,0 +1,8 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+    <view class="bd">
+        <view class="confirm-btn" bindtap='goToHome'>
+          <text >进入店铺</text>
+        </view>
+    </view>
+</view>
