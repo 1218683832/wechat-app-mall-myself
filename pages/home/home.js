@@ -1,4 +1,4 @@
-// pages/welcome/welcome.js
+// pages/home/home.js
 Page({
 
   /**
@@ -6,15 +6,6 @@ Page({
    */
   data: {
 
-  },
-
-  /**
-   * 进入首页
-   */
-  goToHome: function () {
-    wx.navigateTo({
-      url: '../home/home'
-    });
   },
 
   /**
