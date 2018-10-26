@@ -1,58 +1,14 @@
 <!--pages/home/home.wxml-->
 <view class="container">
   <view class='goods-container'>
-    <view class="goods-box" bindtap="toDetailsTap">
+    <view class="goods-box" bindtap="toDetailsTap" wx:for="{{goods}}" wx:for-index="idx" wx:for-item="good" wx:key="{{good.id}}">
       <view class="img-box">
-        <image src="https://cdn.it120.cc/apifactory/2017/10/30/bc15e96f20fb13cc7d35f90d743ccb17.jpg_m" class="image" mode="aspectFill" lazy-load="true" />
+        <image src="{{good.pic}}" class="image" mode="aspectFill" lazy-load="true" />
       </view>
-      <view class="goods-title">1-3岁袜子</view>
+      <view class="goods-title">{{good.name}}</view>
       <view style='display:flex;'>
-        <view class="goods-price">¥ 80</view>
-        <view wx:if="{{90 && 90 > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ 90</view>
-      </view>
-    </view>
-
-    <view class="goods-box" bindtap="toDetailsTap">
-      <view class="img-box">
-        <image src="https://cdn.it120.cc/apifactory/2017/10/30/bc15e96f20fb13cc7d35f90d743ccb17.jpg_m" class="image" mode="aspectFill" lazy-load="true" />
-      </view>
-      <view class="goods-title">1-3岁袜子</view>
-      <view style='display:flex;'>
-        <view class="goods-price">¥ 80</view>
-        <view wx:if="{{90 && 90 > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ 90</view>
-      </view>
-    </view>
-
-    <view class="goods-box" bindtap="toDetailsTap">
-      <view class="img-box">
-        <image src="https://cdn.it120.cc/apifactory/2017/10/30/bc15e96f20fb13cc7d35f90d743ccb17.jpg_m" class="image" mode="aspectFill" lazy-load="true" />
-      </view>
-      <view class="goods-title">1-3岁袜子</view>
-      <view style='display:flex;'>
-        <view class="goods-price">¥ 80</view>
-        <view wx:if="{{90 && 90 > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ 90</view>
-      </view>
-    </view>
-
-    <view class="goods-box" bindtap="toDetailsTap">
-      <view class="img-box">
-        <image src="https://cdn.it120.cc/apifactory/2017/10/30/bc15e96f20fb13cc7d35f90d743ccb17.jpg_m" class="image" mode="aspectFill" lazy-load="true" />
-      </view>
-      <view class="goods-title">1-3岁袜子</view>
-      <view style='display:flex;'>
-        <view class="goods-price">¥ 80</view>
-        <view wx:if="{{90 && 90 > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ 90</view>
-      </view>
-    </view>
-
-    <view class="goods-box" bindtap="toDetailsTap">
-      <view class="img-box">
-        <image src="https://cdn.it120.cc/apifactory/2017/10/30/bc15e96f20fb13cc7d35f90d743ccb17.jpg_m" class="image" mode="aspectFill" lazy-load="true" />
-      </view>
-      <view class="goods-title">1-3岁袜子</view>
-      <view style='display:flex;'>
-        <view class="goods-price">¥ 80</view>
-        <view wx:if="{{90 && 90 > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ 90</view>
+        <view class="goods-price">¥ {{good.minPrice}}</view>
+        <view wx:if="{{good.originalPrice && good.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{good.originalPrice}}</view>
       </view>
     </view>
   </view>
